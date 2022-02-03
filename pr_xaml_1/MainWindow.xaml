@@ -1,0 +1,117 @@
+﻿<Window x:Class="pr_xaml_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pr_xaml_1"
+        mc:Ignorable="d"
+        Title="Práctica XAML. First steps" Height="400" Width="600" MinWidth="550" MinHeight="350" MaxWidth="650" MaxHeight="450">
+
+    <DockPanel Background="Azure">
+        
+        <StackPanel DockPanel.Dock="Top" Background="Brown" >
+            <Border Background="BurlyWood"
+                    BorderThickness="5" CornerRadius="8,8,8,8">
+                <TextBlock Style="{StaticResource Titulo}"
+                   HorizontalAlignment="Center"
+                   FontWeight="Bold"
+                   FontSize="24"
+                   Margin="5"
+                   Background="Wheat"/>
+            </Border>
+        </StackPanel>
+
+        
+        <StackPanel DockPanel.Dock="Bottom" Background="Black">
+            <TextBlock Margin="5" Text="Autor: Yoel Millan Fernandez" Foreground="White"/>
+        </StackPanel>
+
+
+        <Grid VerticalAlignment="Stretch"
+              HorizontalAlignment="Left">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
+
+            <Label Style="{StaticResource MiEstilo}" Grid.Row="0"
+                       Grid.Column="0"
+                       Content="Nombre:" />
+            <TextBox Style="{StaticResource MiEstilo}" Grid.Row="1"
+                         Grid.Column="0"
+                         VerticalAlignment="Center"
+                         Name="tbNombre" />
+
+            <Label Style="{StaticResource MiEstilo}" Grid.Row="0"
+                       Grid.Column="1"
+                       Content="Apellido:" />
+            <TextBox Style="{StaticResource MiEstilo}" Grid.Row="1"
+                         Grid.Column="1"
+                         VerticalAlignment="Center"
+                         Name="tbNom" />
+
+            <Label Style="{StaticResource MiEstilo}" Grid.Row="2"
+                       Grid.Column="0"
+                       Content="Nota deseada:" />
+            <TextBox Style="{StaticResource MiEstilo}" Grid.Row="3"
+                         Grid.Column="0"
+                         VerticalAlignment="Center"
+                         Name="tbNota" />
+
+            <Label Style="{StaticResource MiEstilo}" Grid.Row="4"
+                       Grid.Column="0"
+                       Content="Enviar al Profe:" />
+            <CheckBox Style="{StaticResource MiEstilo}" Grid.Row="5"
+                         Grid.Column="0"
+                         VerticalAlignment="Center"
+                         Content="Jamon 5J" />
+            <CheckBox Style="{StaticResource MiEstilo}" Grid.Row="6"
+                         Grid.Column="0"
+                         VerticalAlignment="Center"
+                         Content="Vega Sicilia"/>
+
+            <Label Style="{StaticResource MiEstilo}" Grid.Row="2"
+                       Grid.Column="1"
+                       Content="_El Profe es:" />
+            <RadioButton Style="{StaticResource MiEstilo}" Grid.Row="3"
+                       Grid.Column="1"
+                       Content="Un genio" />
+            <RadioButton Style="{StaticResource MiEstilo}" Grid.Row="4"
+                       Grid.Column="1"
+                       Content="Un monstruo" />
+            <RadioButton Style="{StaticResource MiEstilo}" Grid.Row="5"
+                       Grid.Column="1"
+                       Content="Best profe ever" />
+            <RadioButton Style="{StaticResource MiEstilo}" Grid.Row="6"
+                       Grid.Column="1"
+                       Content="Muy malo" />
+        </Grid>
+
+        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Right" Width="150" Background="Beige" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0">
+                Este es el Boton 1
+            </Button>
+            <Button Grid.Row="1" HorizontalAlignment="Center">
+                Boton 2
+            </Button>
+            <Button Grid.Row="3" VerticalAlignment="Bottom" Margin="10,0,10,0">
+                Aqui el Boton 3
+            </Button>
+        </Grid>
+    </DockPanel>
+</Window>
